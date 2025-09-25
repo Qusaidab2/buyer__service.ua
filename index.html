@@ -11,7 +11,7 @@
 
 <!-- Header -->
 <header>
-  <div class="container header-container">
+  <div class="container">
     <div class="logo">Buyer Service UA</div>
     <nav>
       <ul>
@@ -25,7 +25,7 @@
   </div>
 </header>
 
-<!-- Hero -->
+<!-- Hero Section -->
 <section id="home" class="hero">
   <div class="hero-content">
     <h1>Connecting You With Trusted Services</h1>
@@ -34,7 +34,7 @@
   </div>
 </section>
 
-<!-- Services -->
+<!-- Services Section -->
 <section id="services" class="services">
   <div class="container">
     <h2>Our Services</h2>
@@ -59,7 +59,7 @@
   </div>
 </section>
 
-<!-- Reviews -->
+<!-- Reviews Section -->
 <section id="reviews" class="reviews">
   <div class="container">
     <h2>Customer Reviews</h2>
@@ -80,7 +80,7 @@
   </div>
 </section>
 
-<!-- Instagram -->
+<!-- Instagram Feed Section -->
 <section id="instagram" class="instagram">
   <div class="container">
     <h2>Instagram Feed</h2>
@@ -93,7 +93,7 @@
   </div>
 </section>
 
-<!-- Contact -->
+<!-- Contact Section -->
 <section id="contact" class="contact">
   <div class="container">
     <h2>Contact Us</h2>
@@ -113,142 +113,5 @@
   </div>
 </footer>
 
-</body>
-</html>
-
-<!-- Services Section -->
-<section id="services" class="services">
-    <div class="container">
-        <h2>Our Top Services</h2>
-        <div class="service-grid" id="service-grid">
-            <!-- Dynamic services inserted via JS -->
-        </div>
-        <button id="loadMore" class="btn load-more">Load More</button>
-    </div>
-</section>
-
-<!-- Reviews Section -->
-<section id="reviews" class="reviews">
-    <div class="container">
-        <h2>What Our Customers Say</h2>
-        <div class="review-grid" id="review-grid">
-            <!-- Dynamic reviews -->
-        </div>
-    </div>
-</section>
-
-<!-- Instagram Feed Section -->
-<section id="instagram" class="instagram">
-    <div class="container">
-        <h2>Our Instagram</h2>
-        <div class="insta-grid" id="insta-grid">
-            <!-- Dynamic Instagram images -->
-        </div>
-    </div>
-</section>
-
-<!-- Contact Section -->
-<section id="contact" class="contact">
-    <div class="container">
-        <h2>Contact Us</h2>
-        <form action="#" method="POST">
-            <div class="form-group">
-                <input type="text" name="name" placeholder="Your Name" required>
-            </div>
-            <div class="form-group">
-                <input type="email" name="email" placeholder="Your Email" required>
-            </div>
-            <div class="form-group">
-                <textarea name="message" placeholder="Your Message" required></textarea>
-            </div>
-            <button type="submit" class="btn">Send Message</button>
-        </form>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer>
-    <div class="container footer-container">
-        <p>&copy; 2025 Buyer Service UA. All Rights Reserved.</p>
-    </div>
-</footer>
-
-<script>
-// Services
-const services = [
-    {title:"Fast Delivery", desc:"Receive services instantly with our fast response.", img:"https://via.placeholder.com/400x250"},
-    {title:"Professional Support", desc:"Experts ready to help you anytime.", img:"https://via.placeholder.com/400x250"},
-    {title:"Trusted Providers", desc:"All services are verified and reliable.", img:"https://via.placeholder.com/400x250"},
-    {title:"Affordable Prices", desc:"Premium service without premium costs.", img:"https://via.placeholder.com/400x250"},
-    {title:"Custom Solutions", desc:"Tailored services to fit your needs.", img:"https://via.placeholder.com/400x250"},
-    {title:"24/7 Availability", desc:"Support around the clock for your convenience.", img:"https://via.placeholder.com/400x250"},
-    {title:"New Services", desc:"Constantly updated to offer the latest.", img:"https://via.placeholder.com/400x250"},
-    {title:"Customer Satisfaction", desc:"Our priority is your happiness.", img:"https://via.placeholder.com/400x250"}
-];
-
-let visible = 6;
-function loadServices() {
-    const grid = document.getElementById('service-grid');
-    grid.innerHTML = '';
-    for(let i=0;i<visible && i<services.length;i++){
-        grid.innerHTML += `<div class="service-item animate-up">
-            <img src="${services[i].img}" alt="${services[i].title}">
-            <h3>${services[i].title}</h3>
-            <p>${services[i].desc}</p>
-        </div>`;
-    }
-}
-
-document.getElementById('loadMore').addEventListener('click',()=>{
-    visible+=2;
-    loadServices();
-});
-
-loadServices();
-
-// Reviews
-const reviews = [
-    {text:"Amazing service! Quick and reliable.", author:"- Anna K."},
-    {text:"Professional and efficient team.", author:"- Sergey L."},
-    {text:"Affordable prices and excellent service.", author:"- Maria P."},
-    {text:"I always trust them for my needs.", author:"- Ivan D."},
-    {text:"Highly recommended for anyone in Ukraine.", author:"- Olena M."}
-];
-
-const reviewGrid = document.getElementById('review-grid');
-reviews.forEach(r=>{
-    const div = document.createElement('div');
-    div.className="review-item animate-up";
-    div.innerHTML = `<p>"${r.text}"</p><span>${r.author}</span>`;
-    reviewGrid.appendChild(div);
-});
-
-// Scroll Animation
-const animatedElements = document.querySelectorAll('.animate-up');
-window.addEventListener('scroll', ()=>{
-    animatedElements.forEach(el=>{
-        const top = el.getBoundingClientRect().top;
-        if(top<window.innerHeight-50){
-            el.classList.add('show');
-        }
-    });
-});
-
-// Instagram placeholder
-const instaImages = [
-    "https://via.placeholder.com/250x250",
-    "https://via.placeholder.com/250x250",
-    "https://via.placeholder.com/250x250",
-    "https://via.placeholder.com/250x250",
-    "https://via.placeholder.com/250x250",
-    "https://via.placeholder.com/250x250"
-];
-const instaGrid = document.getElementById('insta-grid');
-instaImages.forEach(src=>{
-    const img = document.createElement('img');
-    img.src=src;
-    instaGrid.appendChild(img);
-});
-</script>
 </body>
 </html>
