@@ -4,57 +4,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buyer Service UA</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#reviews">Reviews</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="container header-container">
+            <div class="logo">Buyer Service UA</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <section id="home">
-        <h1>Welcome to Buyer Service UA</h1>
-        <p>Your trusted platform for finding reliable services in Ukraine.</p>
-    </section>
-
-    <section id="services">
-        <h2>Our Services</h2>
-        <div class="service-list">
-            <!-- Dynamic content will be inserted here -->
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Your Trusted Service Connection in Ukraine</h1>
+            <p>We connect buyers with reliable services with ease and confidence.</p>
+            <a href="#services" class="btn">Explore Services</a>
         </div>
     </section>
 
-    <section id="reviews">
-        <h2>Customer Reviews</h2>
-        <div class="review-list">
-            <!-- Dynamic content will be inserted here -->
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-grid">
+                <div class="service-item">
+                    <img src="https://via.placeholder.com/300x200" alt="Service 1">
+                    <h3>Service One</h3>
+                    <p>Reliable and fast service tailored to your needs.</p>
+                </div>
+                <div class="service-item">
+                    <img src="https://via.placeholder.com/300x200" alt="Service 2">
+                    <h3>Service Two</h3>
+                    <p>Professional team ready to assist you anytime.</p>
+                </div>
+                <div class="service-item">
+                    <img src="https://via.placeholder.com/300x200" alt="Service 3">
+                    <h3>Service Three</h3>
+                    <p>Affordable services with guaranteed satisfaction.</p>
+                </div>
+                <div class="service-item">
+                    <img src="https://via.placeholder.com/300x200" alt="Service 4">
+                    <h3>Service Four</h3>
+                    <p>Expert guidance for all your service needs.</p>
+                </div>
+                <div class="service-item">
+                    <img src="https://via.placeholder.com/300x200" alt="Service 5">
+                    <h3>Service Five</h3>
+                    <p>Quick response and hassle-free experience.</p>
+                </div>
+                <div class="service-item">
+                    <img src="https://via.placeholder.com/300x200" alt="Service 6">
+                    <h3>Service Six</h3>
+                    <p>Trusted by hundreds of happy clients.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form action="submit_form.php" method="POST">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-
-            <button type="submit">Send Message</button>
-        </form>
+    <!-- Reviews Section -->
+    <section id="reviews" class="reviews">
+        <div class="container">
+            <h2>Customer Reviews</h2>
+            <div class="review-grid">
+                <div class="review-item">
+                    <p>"Amazing service! Quick and reliable. Highly recommended."</p>
+                    <span>- Anna K.</span>
+                </div>
+                <div class="review-item">
+                    <p>"Professional team and easy communication. Loved it!"</p>
+                    <span>- Sergey L.</span>
+                </div>
+                <div class="review-item">
+                    <p>"Affordable prices and excellent service. Will use again."</p>
+                    <span>- Maria P.</span>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Buyer Service UA. All rights reserved.</p>
+        <div class="container footer-container">
+            <p>&copy; 2025 Buyer Service UA. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
