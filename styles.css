@@ -1,73 +1,57 @@
-/* General Reset & Font */
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Montserrat',sans-serif;background:#f4f4f4;color:#333;line-height:1.6;}
+/* Reset & Fonts */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Montserrat', sans-serif; background:#f5f5f5; color:#333; line-height:1.6; }
 
 /* Container */
-.container{width:90%;max-width:1200px;margin:0 auto;}
+.container { width:90%; max-width:1200px; margin:0 auto; }
 
 /* Header */
-header{background:#111;color:#fff;padding:20px 0;position:sticky;top:0;z-index:100;}
-.header-container{display:flex;justify-content:space-between;align-items:center;}
-header .logo{font-size:1.8rem;font-weight:700;}
-header nav ul{display:flex;gap:25px;list-style:none;}
-header nav ul li a{color:#fff;text-decoration:none;font-weight:600;transition:color 0.3s;}
-header nav ul li a:hover{color:#ff4757;}
+header { background:#111; padding:20px 0; position:sticky; top:0; z-index:100; }
+.header-container { display:flex; justify-content:space-between; align-items:center; }
+header .logo { color:#fff; font-weight:700; font-size:1.8rem; }
+header nav ul { list-style:none; display:flex; gap:25px; }
+header nav ul li a { color:#fff; text-decoration:none; font-weight:600; }
+header nav ul li a:hover { color:#ff4757; }
 
 /* Hero */
-.hero{height:90vh;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;background:url('https://via.placeholder.com/1600x900') center/cover no-repeat;}
-.hero-overlay{position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);}
-.hero-content{position:relative;color:#fff;max-width:800px;}
-.hero h1{font-size:3rem;margin-bottom:20px;transform:translateY(50px);opacity:0;transition:0.6s;}
-.hero p{font-size:1.2rem;margin-bottom:30px;transform:translateY(50px);opacity:0;transition:0.6s;}
-.hero .btn{padding:12px 30px;background:#ff4757;color:#fff;border-radius:30px;text-decoration:none;font-weight:600;transition:0.3s;}
-.hero .btn:hover{background:#e84118;}
-
-/* Animate Scroll */
-.animate-up{transform:translateY(50px);opacity:0;transition:all 0.6s;}
-.animate-up.show{transform:translateY(0);opacity:1;}
-.delay1{transition-delay:0.2s;}
-.delay2{transition-delay:0.4s;}
+.hero { height:80vh; display:flex; align-items:center; justify-content:center; text-align:center; background:#fff; }
+.hero-content { max-width:700px; }
+.hero h1 { font-size:2.8rem; margin-bottom:20px; }
+.hero p { font-size:1.2rem; margin-bottom:30px; }
+.hero .btn { padding:12px 30px; background:#ff4757; color:#fff; text-decoration:none; border-radius:30px; font-weight:600; }
 
 /* Services */
-.services{padding:80px 0;text-align:center;}
-.services h2{font-size:2.5rem;margin-bottom:50px;color:#111;}
-.service-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;}
-.service-item{background:#fff;border-radius:15px;overflow:hidden;transition:transform 0.3s,box-shadow 0.3s;}
-.service-item img{width:100%;display:block;}
-.service-item h3{margin:15px 0;font-size:1.3rem;}
-.service-item p{padding:0 15px 15px;color:#555;}
-.service-item:hover{transform:translateY(-10px);box-shadow:0 15px 25px rgba(0,0,0,0.15);}
-.load-more{margin-top:40px;padding:12px 30px;background:#ff4757;color:#fff;border:none;border-radius:30px;font-weight:600;cursor:pointer;transition:0.3s;}
-.load-more:hover{background:#e84118;}
+.services { padding:80px 0; text-align:center; }
+.services h2 { font-size:2.5rem; margin-bottom:50px; }
+.service-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:30px; }
+.service-item { background:#fff; padding:25px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.1); }
+.service-item h3 { margin-bottom:10px; font-size:1.3rem; }
 
 /* Reviews */
-.reviews{padding:80px 0;background:#f9f9f9;text-align:center;}
-.review-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;margin-top:40px;}
-.review-item{background:#fff;padding:25px;border-radius:15px;box-shadow:0 8px 20px rgba(0,0,0,0.1);transform:translateY(50px);opacity:0;transition:0.6s;}
-.review-item p{margin-bottom:15px;color:#333;}
-.review-item span{color:#ff4757;font-weight:600;}
+.reviews { padding:80px 0; }
+.review-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:25px; margin-top:40px; }
+.review-item { background:#fff; padding:20px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.1); }
+.review-item p { margin-bottom:10px; }
+.review-item span { font-weight:600; color:#ff4757; }
 
 /* Instagram */
-.instagram{padding:80px 0;text-align:center;}
-.insta-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:15px;margin-top:40px;}
-.insta-grid img{width:100%;border-radius:12px;transition:transform 0.3s;}
-.insta-grid img:hover{transform:scale(1.05);}
+.instagram { padding:80px 0; text-align:center; }
+.insta-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:15px; margin-top:40px; }
+.insta-grid img { width:100%; border-radius:10px; }
 
 /* Contact */
-.contact{padding:80px 0;background:#fff;text-align:center;}
-.contact form{max-width:600px;margin:0 auto;}
-.form-group{margin-bottom:20px;}
-form input,form textarea{width:100%;padding:12px 15px;border:1px solid #ddd;border-radius:10px;font-size:1rem;}
-form textarea{resize:none;height:150px;}
-form button{padding:12px 30px;border:none;background:#ff4757;color:#fff;border-radius:30px;font-size:1rem;font-weight:600;cursor:pointer;transition:0.3s;}
-form button:hover{background:#e84118;}
+.contact { padding:80px 0; text-align:center; }
+.contact form { max-width:600px; margin:0 auto; display:flex; flex-direction:column; gap:15px; }
+form input, form textarea { padding:12px 15px; border-radius:10px; border:1px solid #ddd; font-size:1rem; }
+form textarea { height:150px; resize:none; }
+form button { padding:12px 30px; background:#ff4757; color:#fff; border:none; border-radius:30px; font-weight:600; cursor:pointer; }
 
 /* Footer */
-footer{background:#111;color:#fff;padding:20px 0;text-align:center;}
+footer { background:#111; color:#fff; padding:20px 0; text-align:center; }
 
 /* Responsive */
 @media(max-width:768px){
-    .hero h1{font-size:2rem;}
-    .hero p{font-size:1rem;}
-    header nav ul{flex-direction:column;gap:15px;}
+    header nav ul{ flex-direction:column; gap:15px; }
+    .hero h1 { font-size:2rem; }
+    .hero p { font-size:1rem; }
 }
