@@ -8,114 +8,160 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container header-container">
-            <div class="logo">Buyer Service UA</div>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#reviews">Reviews</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Your Trusted Service Connection in Ukraine</h1>
-            <p>We connect buyers with reliable services with ease and confidence.</p>
-            <a href="#services" class="btn">Explore Services</a>
-        </div>
-    </section>
+<!-- Header -->
+<header>
+    <div class="container header-container">
+        <div class="logo">Buyer Service UA</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2>Our Services</h2>
-            <div class="service-grid">
-                <div class="service-item">
-                    <img src="https://via.placeholder.com/300x200" alt="Service 1">
-                    <h3>Service One</h3>
-                    <p>Reliable and fast service tailored to your needs.</p>
-                </div>
-                <div class="service-item">
-                    <img src="https://via.placeholder.com/300x200" alt="Service 2">
-                    <h3>Service Two</h3>
-                    <p>Professional team ready to assist you anytime.</p>
-                </div>
-                <div class="service-item">
-                    <img src="https://via.placeholder.com/300x200" alt="Service 3">
-                    <h3>Service Three</h3>
-                    <p>Affordable services with guaranteed satisfaction.</p>
-                </div>
-                <div class="service-item">
-                    <img src="https://via.placeholder.com/300x200" alt="Service 4">
-                    <h3>Service Four</h3>
-                    <p>Expert guidance for all your service needs.</p>
-                </div>
-                <div class="service-item">
-                    <img src="https://via.placeholder.com/300x200" alt="Service 5">
-                    <h3>Service Five</h3>
-                    <p>Quick response and hassle-free experience.</p>
-                </div>
-                <div class="service-item">
-                    <img src="https://via.placeholder.com/300x200" alt="Service 6">
-                    <h3>Service Six</h3>
-                    <p>Trusted by hundreds of happy clients.</p>
-                </div>
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h1 class="animate-up">Your Trusted Service Connection in Ukraine</h1>
+        <p class="animate-up delay1">We connect buyers with reliable services with ease and confidence.</p>
+        <a href="#services" class="btn animate-up delay2">Explore Services</a>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="services">
+    <div class="container">
+        <h2>Our Services</h2>
+        <div class="service-grid" id="service-grid">
+            <!-- Services dynamically loaded -->
+        </div>
+        <button id="loadMore" class="btn load-more">Load More Services</button>
+    </div>
+</section>
+
+<!-- Reviews Section -->
+<section id="reviews" class="reviews">
+    <div class="container">
+        <h2>Customer Reviews</h2>
+        <div class="review-grid">
+            <div class="review-item animate-up">
+                <p>"Amazing service! Quick and reliable. Highly recommended."</p>
+                <span>- Anna K.</span>
+            </div>
+            <div class="review-item animate-up delay1">
+                <p>"Professional team and easy communication. Loved it!"</p>
+                <span>- Sergey L.</span>
+            </div>
+            <div class="review-item animate-up delay2">
+                <p>"Affordable prices and excellent service. Will use again."</p>
+                <span>- Maria P.</span>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Reviews Section -->
-    <section id="reviews" class="reviews">
-        <div class="container">
-            <h2>Customer Reviews</h2>
-            <div class="review-grid">
-                <div class="review-item">
-                    <p>"Amazing service! Quick and reliable. Highly recommended."</p>
-                    <span>- Anna K.</span>
-                </div>
-                <div class="review-item">
-                    <p>"Professional team and easy communication. Loved it!"</p>
-                    <span>- Sergey L.</span>
-                </div>
-                <div class="review-item">
-                    <p>"Affordable prices and excellent service. Will use again."</p>
-                    <span>- Maria P.</span>
-                </div>
+<!-- Instagram Feed Section -->
+<section class="instagram">
+    <div class="container">
+        <h2>Our Instagram Feed</h2>
+        <div class="insta-grid" id="insta-grid">
+            <!-- Instagram images dynamically inserted -->
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <form action="#" method="POST">
+            <div class="form-group">
+                <input type="text" name="name" placeholder="Your Name" required>
             </div>
-        </div>
-    </section>
+            <div class="form-group">
+                <input type="email" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+                <textarea name="message" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </div>
+</section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <form action="#" method="POST">
-                <div class="form-group">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" name="email" placeholder="Your Email" required>
-                </div>
-                <div class="form-group">
-                    <textarea name="message" placeholder="Your Message" required></textarea>
-                </div>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
-        </div>
-    </section>
+<!-- Footer -->
+<footer>
+    <div class="container footer-container">
+        <p>&copy; 2025 Buyer Service UA. All rights reserved.</p>
+    </div>
+</footer>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container footer-container">
-            <p>&copy; 2025 Buyer Service UA. All rights reserved.</p>
-        </div>
-    </footer>
+<script>
+// Dynamic Services
+const services = [
+    {title:"Service One", desc:"Reliable and fast service tailored to your needs.", img:"https://via.placeholder.com/300x200"},
+    {title:"Service Two", desc:"Professional team ready to assist you anytime.", img:"https://via.placeholder.com/300x200"},
+    {title:"Service Three", desc:"Affordable services with guaranteed satisfaction.", img:"https://via.placeholder.com/300x200"},
+    {title:"Service Four", desc:"Expert guidance for all your service needs.", img:"https://via.placeholder.com/300x200"},
+    {title:"Service Five", desc:"Quick response and hassle-free experience.", img:"https://via.placeholder.com/300x200"},
+    {title:"Service Six", desc:"Trusted by hundreds of happy clients.", img:"https://via.placeholder.com/300x200"},
+    {title:"Service Seven", desc:"New service to expand your options.", img:"https://via.placeholder.com/300x200"},
+    {title:"Service Eight", desc:"Expert service with personal attention.", img:"https://via.placeholder.com/300x200"}
+];
+
+let visible = 6;
+function loadServices() {
+    const grid = document.getElementById('service-grid');
+    grid.innerHTML = '';
+    for(let i=0; i<visible && i<services.length; i++){
+        grid.innerHTML += `<div class="service-item animate-up">
+            <img src="${services[i].img}" alt="${services[i].title}">
+            <h3>${services[i].title}</h3>
+            <p>${services[i].desc}</p>
+        </div>`;
+    }
+}
+
+document.getElementById('loadMore').addEventListener('click', ()=>{
+    visible += 2;
+    loadServices();
+});
+
+loadServices();
+
+// Scroll Animations
+const animatedElements = document.querySelectorAll('.animate-up');
+window.addEventListener('scroll', () => {
+    animatedElements.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if(top < window.innerHeight - 50){
+            el.classList.add('show');
+        }
+    });
+});
+
+// Instagram Feed Placeholder
+const instaImages = [
+    "https://via.placeholder.com/250x250",
+    "https://via.placeholder.com/250x250",
+    "https://via.placeholder.com/250x250",
+    "https://via.placeholder.com/250x250",
+    "https://via.placeholder.com/250x250",
+    "https://via.placeholder.com/250x250"
+];
+
+const instaGrid = document.getElementById('insta-grid');
+instaImages.forEach(src => {
+    const img = document.createElement('img');
+    img.src = src;
+    instaGrid.appendChild(img);
+});
+</script>
+
 </body>
 </html>
