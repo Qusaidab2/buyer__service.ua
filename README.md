@@ -1,0 +1,1 @@
+# buyer__service.ua
